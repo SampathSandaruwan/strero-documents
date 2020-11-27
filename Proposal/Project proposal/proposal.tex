@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{float,amsthm,amsmath,amssymb,amsthm,graphicx,enumerate,hyperref}
+\usepackage{fancyvrb}
+\graphicspath{ {./images/} }
+
+\usepackage{pgfgantt}
+\usepackage{lscape}
+
+
+\begin{document}
+	\input{titlepage}
+	
+	\tableofcontents
+	\newpage
+
+	\section{Introduction}
+	Most people in the society should be employed so that they are able to earn enough (money) to live and provide for themselves and their family. Although naturally, these may include meals, clothes and sanitary wear; a person also needs other items, a few luxury items every now and then, a fancy dress for a wedding or a new phone, to feel content and satisfied with life, so as not to feel worthless.\\
+	
+	\indent According to the ``International Standards Classification of Occupations\cite{iscoDefinition}'', there are 10 categories of occupations in the world. From that list, the people who working on top-most 4 of those categories are mostly doing their jobs using the mental power rather than their physical power. When dividing those 4 categories into more sub-categories, about half of them are indoor occupations. That means people who doing those jobs are usually sitting on a table, working with stationary or sitting in front of a computer.\\
+	
+	\indent Working in the same and consistent environment for a long time tends to make most people to get bored of that environment\cite{workingEnvironmentBoredom} and it leads to reduction in productivity of that person and hence the company too. This may happen at any place that is very steady and even. As mentioned above, a person who sits on a chair in front of a computer or books for a long time may face this problem frequently. Not only for an employee in an office, but a child in a study room also may face this problem frequently.\\
+	
+	\indent I decided to find a solution for this problem, while narrowing down the scope into “Employee in an software development company” scenario. Here I decided to use a companion robot, that can identify stress level, drowsiness, loneliness and other uncomfortable feelings or moods of the employee by observing behavioral traits of that particular person, then analyzing them against time, and finally responding in such a way that it rids the employee from feeling lonely or drowsy and help them to have a stress free mindset ehich results in an improved level of productivity.
+	
+	\section{Significance of the Research}
+	The major problem faced by most of people in the working environment is the workplace boredom due to feeling uncomfortable. Non-physical discomfort highly affects a person, driving them towards boredom\cite{whyYouFeelBored} even if the working environment is physically comfortable. Loneliness and consistency have been identified as some of most frequent reasons for a lack of interest in the working environment and then to build the workplace boredom as mentioned above.\\
+
+	\indent So is there any way to do small changes in the environment without disturbing that person (employee), and is there any way to build up a feeling in those person, that he/ she is not isolated, then those things may make that person comfortable in a non-physical way and then that employee may be inclined to work happier and agog\cite{happynessAndProductivity}. The workload that person can handle is quite higher than which is done when the person is in a bored and stressful mood.\\
+	
+	\indent So this robot may cause to improve the productivity of that particular person by reducing the boredom and stress of that employee and, finally, improves the productivity of that company.
+	
+	\section{Research Objectives}
+	\begin{itemize}
+		\item Make the working environment look joyful from the employees’ perspective
+		\item Increase the productivity of employees to develop the company from the employer’s perspective
+		\item Increase the non-physical (mental) health of employees from the company's HR’s perspective
+	\end{itemize}
+
+	\section{Methodology}
+	\subsection{Hardware Implementation(s)}
+	\begin{itemize}
+		\item Currently I have planed to build a small robot, that contains both interface and processing part in the same module, which can place on the employees' computer monitor. Then that robot will analyze facial muscles and eye movements of that employee.
+		\item If some technical limitations occurred in university level, only the camera, display, speaker and such IO devices may embedded with interface module, which may placed on the monitor as mentioned above, and the module which stands for processing inputs and generating output signals may moved as an separated module, which is connected to interface part via a cables or Wi-Fi.
+		\item Or else can make it a USB plugable device that do the processing part from that employee's machine itself with driver software and the interface module may be there same as the early case.
+		\item To detect the uncomfortable situations of a human, I have to analyze raw data taken from camera, by processing those video frames. It may require some higher computation power to process those video frames. So a powerful micro-controller (likes Raspberry PIE) or an external computer (mini-pc) may be required for that. So not only the size and shape of hardware, the performance also should be considered.
+		\item Actuators and motors to do movements which makes the employee happy
+	\end{itemize}
+	\subsection{Software Implementation(s)}
+	\begin{itemize}
+		\item Have to recognize the person who is currently sitting near the computer.
+		\item If that person currently with some uncomfortable situations, then the system should detect those uncomfortable situations of that person.
+		\item Decide the most suitable action to do according to the person's current situation.
+		\item Command actuators and motors to perform the action decided.
+	\end{itemize}
+	
+	\section{Design}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]{design.png}
+		\\[25pt]
+	\end{figure}
+	
+	\section{Timeline}
+	\begin{landscape}
+		\input{timeline}
+	\end{landscape}
+	
+	\newpage
+	\begin{thebibliography}{9}
+	\bibitem{iscoDefinition}
+	ISCO - International Standard Classification of Occupations [WWW Document], n.d. URL https://www.ilo.org/public/english/bureau/stat/isco/isco08/ (accessed 7.25.20).
+	
+	\bibitem{workingEnvironmentBoredom}
+	Fisherl, C.D., 2016. Boredom at Work: A Neglected Concept: Human Relations. https://doi.org/10.1177/001872679304600305
+	
+	\bibitem{whyYouFeelBored}
+	What to Do When Bored at Work (And Why You Feel Bored Actually) [WWW Document], 2017. . Lifehack. URL https://www.lifehack.org/572501/feeling-bored-work-here-are-causes-you-may-not-realize-and-how-you-can-cure-the-boredom (accessed 7.25.20).
+	
+	\bibitem{happynessAndProductivity}
+	Kim, J., Candido, C., Thomas, L., de Dear, R., 2016. Desk ownership in the workplace: The effect of non-territorial working on employee workplace satisfaction, perceived productivity and health. Building and Environment 103, 203–214. https://doi.org/10.1016/j.buildenv.2016.04.015
+	
+		
+	\end{thebibliography}
+	
+\end{document}
